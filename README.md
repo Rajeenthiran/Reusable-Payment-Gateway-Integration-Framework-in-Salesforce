@@ -1,18 +1,20 @@
-# Salesforce DX Project: Next Steps
+Many organizations use Salesforce to manage customers, orders, and sales processes, but payments are handled through external payment gateways such as Stripe, PayPal, or Razorpay.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+In most implementations:
 
-## How Do You Plan to Deploy Your Changes?
+Each payment gateway integration is built separately
+Code is tightly coupled and not reusable
+Switching or adding a new gateway requires significant redevelopment
+Payment data is not standardized across systems
+Error handling and logging are inconsistent
+Support and debugging become complex and time-consuming
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+As a result:
 
-## Configure Your Salesforce DX Project
+Development effort increases
+Maintenance becomes difficult
+System scalability is limited
+Business cannot quickly adapt to new payment providers
+🎯 Business Requirement
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+The organization requires a scalable and reusable payment integration framework within Salesforce that can support multiple payment gateways with minimal development effort.
